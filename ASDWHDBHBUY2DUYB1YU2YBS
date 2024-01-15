@@ -17,23 +17,6 @@ local ExecutionTime = tick();
 --   \/  \/\_| \_\_| |_/\_/ \_| |_/ \_| |_/___/ \_|  |_/\___/\_| \_/  --
 ------------------------------------------------------------------------
 
--- Load Game:
-if not game:IsLoaded() then
-    repeat
-        task.wait(0.03);
-    until game:IsLoaded()
-end;
-
--- Shit
-if game.Players.LocalPlayer.Team.BrickColor == BrickColor.new("Medium stone grey") then
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "Error!";
-        Text = "Select a Team.";
-        Icon = "";
-    })
-    repeat task.wait() until game.LocalPlayer.Team.BrickColor ~= BrickColor.new("Medium stone grey")
-end;    
-
 -- Script:
 local Players = game:GetService("Players");
 local Teams = game.Teams;
